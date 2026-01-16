@@ -1,0 +1,3 @@
+tk: hoanghuy2006_SQLLogin_1
+mk: 14b1vwi9ef
+chuỗi kết nối: workstation id=GiaoHangTN.mssql.somee.com;packet size=4096;user id=hoanghuy2006_SQLLogin_1;pwd=14b1vwi9ef;data source=GiaoHangTN.mssql.somee.com;persist security info=False;initial catalog=GiaoHangTN;TrustServerCertificate=True

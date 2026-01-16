@@ -129,13 +129,13 @@ import './assets/icon/icon/themify-icons-font/themify-icons-font/themify-icons/t
     top: 0;                /* Sát mép trên */
     left: 0;               /* Sát mép trái */
     padding: 20px;         /* Tạo khoảng cách cho icon đỡ sát lề */
-    background-color: #00ff28;/* Thêm màu nền để dễ phân biệt (tùy chọn) */
+    background-color: #B8FFC3;/* Thêm màu nền để dễ phân biệt (tùy chọn) */
     z-index: 1000;         /* Đảm bảo luôn nằm trên các thành phần khác */
   }
 
   header i{
     font-size: 30px;
-    color: #FFFF;
+    color: #000000;
     padding-right: 10px;
   }
 
@@ -147,12 +147,12 @@ import './assets/icon/icon/themify-icons-font/themify-icons-font/themify-icons/t
   /* phần icons */
 
   header .Support p{
-    color: #FFFF;
+    color: #000000;
   }
 
   header .icon-search,
   header .icon-user{
-    color: #FFFF;
+    color: #000000;
     font-size: 20px;
     text-decoration: none;
     text-align: center;
@@ -171,7 +171,7 @@ header a {
 }
 
 header .Support p {
-  color: #FFFFFF; /* Dùng 6 chữ F */
+  color: #000000; /* Dùng 6 chữ F */
   margin: 0;
   padding-right: 20px;
   font-weight: bold;
