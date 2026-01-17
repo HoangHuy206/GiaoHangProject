@@ -696,7 +696,7 @@ const activeContent = ref('nguoitieudung')
   }
 
   .footer-logo{
-    width: 100px;
+    width: 150px;
   }
   .address-box h4{
     margin-top: 10px;
