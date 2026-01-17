@@ -18,8 +18,8 @@
 
   .background-img img {
     height: auto;
-    width: 200%;
-    display: block;
+    width: 100%;
+  
     
   }
 </style>
