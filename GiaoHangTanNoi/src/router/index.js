@@ -16,6 +16,9 @@ const router = createRouter({
       name: 'login',
       component: Login
     },
+    
+
+    
     {
       path: '/dang-ky',      // Đường dẫn trên trình duyệt
       name: 'dang-ky',

@@ -15,17 +15,21 @@ const handleRegister = () => {
 
 <template>
     <div class="home">
-      <img class="anh" src="D:\Giaohangtannoi\GiaoHangProject\GiaoHangTanNoi\src\assets\anh.logo\anhbiadangnhap1.png" alt="">
+      <img class="anh" src="..\assets\anh.logo\anhbiadangnhap1.png" alt="">
       
       <div class="login-box">
       <h2>Đăng Nhập</h2>
       <input type="text" placeholder="Tên đăng nhập..." class="input-demo">
       <input type="password" placeholder="Mật khẩu..." class="input-demo" required="">
       <button type="submit" class="btn-demo">Đăng Nhập</button>
-      <p> Hoặc </p>
-      <button type="button" class="btn demo" @click="chuyenTrangDangKy">Đăng ký</button>
+      <p style="color: black; font-size: 20px; "> Hoặc </p>
+      
+     <button> <router-link to="/dang-ky" class="btndemo">
+  Đăng ký
+</router-link></button>
       </div>
     </div>
+
 
     
 </template>
@@ -65,7 +69,7 @@ const handleRegister = () => {
 
     h2 {
       font-size: 32px;          
-      color: #333;
+      color: #000000;
       margin: 0;
       font-weight: bold;
       text-transform: uppercase; 
@@ -103,7 +107,8 @@ const handleRegister = () => {
       background-color: #e68a00;
     }
 
-    .p {
-      font-size: 35px;
+    .btndemo{
+      color:#ffffff ;
+      font-weight: bold;
     }
 </style>

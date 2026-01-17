@@ -1,11 +1,14 @@
 import './assets/main.css'
 
 import { createApp } from 'vue'
-import App from './views/Login.vue'
-import router from './router' // Quan trọng: Gọi file router vào
+
+// QUAN TRỌNG: Phải import từ App.vue (cái khung nhà) chứ KHÔNG import Login
+import App from './App.vue' 
+
+import router from './router'
 
 const app = createApp(App)
 
-app.use(router) // Kích hoạt router
+app.use(router)
 
 app.mount('#app')
