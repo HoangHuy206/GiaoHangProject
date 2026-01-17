@@ -48,7 +48,7 @@ const currentContent = computed(() => {
           <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
         </svg>
         <div class="logo-box">
-           <img src="../../assets/anh.logo/anhnen.png" alt="Grab" class="logo-img" /> 
+           <img src="../../assets/anh.logo/anhnen.png" alt="Grab" class="logo-img" style="width: 100px; height:100px;"/> 
         </div>
       </div>
       
@@ -84,11 +84,11 @@ const currentContent = computed(() => {
     <div class="hero-banner">
       <div class="banner-container">
         <div class="hero-content-left">
-          <h1 class="brand-title">GrabFood</h1>
+          <h1 class="brand-title">Food</h1>
           <h2 class="hero-subtitle">Thèm món gì - Đặt ngay món đó!</h2>
           <button class="btn-order">Đặt hàng ngay</button>
           <div class="small-link">
-            Trở thành Đối tác Nhà hàng của GrabFood ngay! <a href="#">Ấn vào đây</a>.
+            Trở thành Đối tác Nhà hàng của ngay! <a href="#">Ấn vào đây</a>.
           </div>
         </div>
 
@@ -135,6 +135,46 @@ const currentContent = computed(() => {
 
      </div>
     </div>
+<div class="footer" style="margin-top:150px;">
+    <div class="footer-container">
+        <div class="footer-column branding">
+          <img src="./assets/anh.logo/anhnen.png" alt="" class="footer-logo">
+          <div class="address-box">
+            <h4>ĐỊA CHỈ </h4>
+              <div class="map-container">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.296073307168!2d105.7475674103227!3d21.020836187970833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3134549c574476c3%3A0xd3c6af79105ea6da!2zVHLGsOG7nW5nIENhbyDEkeG6s25nIEPDtG5nIG5naOG7hyBDYW8gSMOgIE7hu5lp!5e0!3m2!1svi!2s!4v1768646189995!5m2!1svi!2s" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+          </div>
+        </div>
+
+        <div class="footer-colum">
+          <h4>Người dùng </h4>
+          <ul>
+            <li><router-link to="">Có gì mới ?</router-link></li>
+            <li><router-link to="">món mới?</router-link></li>
+            <li><router-link to="">food</router-link></li>
+          </ul>
+        </div>
+
+        <div class="footer-colum">
+          <h4>Đối tác tài xế</h4>
+          <ul>
+            <li><router-link to="">Thông tim mới </router-link></li>
+            <li><router-link to="">Di chuyển </router-link></li>
+            <li><router-link to="">Dịch vụ </router-link></li>
+            <li><router-link to="">Tung tâm tài xế</router-link></li>
+          </ul>
+        </div>
+
+        <div class="footer-colum">
+          <h4>Hợp tác cùng chúng tôi</h4>
+          <ul>
+            <li><router-link to="">Giao Hàng Tận Nơi</router-link></li>
+          </ul>
+        </div>
+
+      </div>
+      </div>
 </template>
 
 <style scoped>
@@ -256,6 +296,13 @@ const currentContent = computed(() => {
   justify-content: space-between;
   align-items: center;
 }
+.user-link {
+    text-decoration: none;
+    color: #000;
+    display: flex;       /* Quan trọng: giúp thẻ a bao trọn icon */
+    align-items: center;
+    cursor: pointer;     /* Hiển thị bàn tay khi di chuột */
+}
 
 .hero-content-left { color: white; max-width: 500px; }
 .brand-title { font-size: 60px; font-weight: 800; margin-bottom: 10px; }
@@ -286,4 +333,77 @@ const currentContent = computed(() => {
 .hero-card-right h3 { color: #333; font-size: 18px; font-weight: 700; margin-bottom: 15px; }
 .card-arrow-link { color: #00B14F; font-weight: bold; text-decoration: none; font-size: 16px; }
 .card-arrow-link:hover { text-decoration: underline; }
+
+.footer {
+    background-color: #c5e2de;
+    padding: 40px 0 20px 0;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .footer-colum.branding {
+    flex: 1.5; 
+    margin-left: 0;
+  }
+
+  .map-container {
+    margin-top: 15px;
+    border-radius: 8px;
+    overflow: hidden; /* Bo góc cho bản đồ */
+    border: 1px solid rgba(0,0,0,0.1);
+  }
+
+  .footer-colum {
+    flex:1;
+    margin-left: 30px;
+  }
+
+  .footer-colum h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  .footer-colum ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-colum ul li {
+    margin-bottom: 10px;
+  }
+
+  .footer-colum ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    transition: 0.3s;
+  }
+
+  .footer-colum ul li a:hover {
+    color: #00ff28;
+  }
+
+  .footer-logo{
+    width: 100px;
+  }
+  .address-box h4{
+    margin-top: 10px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.1); 
+  }
+
+  .footer-bottom p {
+    font-size: 14px;
+    font-weight: bold;
+  }
 </style>
