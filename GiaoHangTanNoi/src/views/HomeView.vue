@@ -4,12 +4,11 @@
 
 <template>
   <div class="home-page">
-    <div class="background-img">
-      
-    </div>
+    
+     
     
     <div class="content">
-       
+  
     </div>
   </div>
 </template>

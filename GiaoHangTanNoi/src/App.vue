@@ -181,7 +181,7 @@ const activeContent = ref('nguoitieudung')
     </div>
 
     <div class="info-section">
-      <h1>Sự đóng góp của chúng tôi về thị trường việt nam</h1>
+      <h1>Sự đóng góp của chúng tôi về thị trường Việt Nam</h1>
       <div class="card-container">
         <div class="info-card">
           <h3>Thúc đẩy chuyển đổi số trong lĩnh vực du lịch</h3>
