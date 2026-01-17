@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import { RouterLink, RouterView } from 'vue-router' // Đảm bảo import đủ
 import './assets/base.css'
 import './assets/icon/icon/themify-icons-font/themify-icons-font/themify-icons/themify-icons.css'
+import router from './router'
 
 const isMenuOpen = ref(false)
 const activeTab = ref('nguoidung') // Tab mặc định đang chọn
@@ -131,8 +132,10 @@ const activeContent = ref('nguoitieudung')
                 <img src="./assets/anh.logo/icondoan.png" alt="Food">
               </div>
               <div class="text-box">
+                <router-link to="/mainSP">
                 <h3>Đồ ăn</h3>
                 <p>Giao món ngon tận tay.</p>
+              </router-link>
               </div>
             </div>
 
@@ -259,6 +262,7 @@ const activeContent = ref('nguoitieudung')
   body, html {
     width: 100%;
     overflow-x: hidden; 
+    
   }
 
   /* --- HEADER STYLES --- */
