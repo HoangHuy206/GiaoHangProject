@@ -5,11 +5,11 @@
 <template>
   <div class="home-page">
     <div class="background-img">
-      <img src="../assets/anh.logo/anhnen.png" alt="Home Background">
+      
     </div>
     
     <div class="content">
-       <h1>Chào mừng đến với Giao Hàng Tận Nơi</h1>
+       
     </div>
   </div>
 </template>
