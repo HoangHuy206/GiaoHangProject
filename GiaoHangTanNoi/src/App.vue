@@ -2,13 +2,15 @@
 import { ref } from 'vue'
 const isMenuOpen = ref(false)
 const activeTab = ref('nguoidung') // Tab mặc định đang chọn
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import { RouterView } from 'vue-router' // Đã import RouterView
 import './assets/base.css'
 import './assets/icon/icon/themify-icons-font/themify-icons-font/themify-icons/themify-icons.css'
 import router from './router'
+<<<<<<< HEAD
 // Tạo biến để theo dõi nội dung đang hiển thị
 const activeContent = ref('nguoitieudung')
+=======
+>>>>>>> b6918fce905ab431c18bceae8ba437083234cda4
 </script>
 
 <template>
@@ -20,12 +22,17 @@ const activeContent = ref('nguoitieudung')
         <div class="header-right">
           <router-link to="" class="Support">
             <p>Trung Tâm Hỗ Trợ </p>
+<<<<<<< HEAD
           </router-link>
           <router-link to=""><i class="icon-search ti-search"></i></router-link>
           <router-link to=""><i class="icon-user ti-user"></i></router-link>
+=======
+          </a>
+          <a href=""><i class="icon-search ti-search"></i></a>
+          <router-link to="/login"><i class="icon-user ti-user"></i></router-link>
+>>>>>>> b6918fce905ab431c18bceae8ba437083234cda4
         </div>
     </header>
-
 
     <div v-if="isMenuOpen" class="mega-menu-container">
       <div class="mega-menu-content">
@@ -98,6 +105,7 @@ const activeContent = ref('nguoitieudung')
       <div class="overlay" @click="isMenuOpen = false"></div>
     </div>
 
+<<<<<<< HEAD
     <!-- kết thúc header -->
      <div class="background-img">
       <img src="./assets/anh.logo/z7435869738899_000_e53e72bd89e38a070e1aa4f3a917f074.jpg" alt="">
@@ -249,6 +257,10 @@ const activeContent = ref('nguoitieudung')
 
     <div class="footer-bottom">
       <p>Theo dõi chúng tôi</p>
+=======
+    <div class="main-content">
+       <RouterView />
+>>>>>>> b6918fce905ab431c18bceae8ba437083234cda4
     </div>
 
   </div>
@@ -259,28 +271,34 @@ const activeContent = ref('nguoitieudung')
   * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Giúp tính toán kích thước chuẩn hơn */
+  box-sizing: border-box; 
   }
 
   body, html {
     width: 100%;
-    overflow-x: hidden; /* Ngăn chặn lỗi cuộn ngang không đáng có */
+    overflow-x: hidden; 
   }
+<<<<<<< HEAD
 
   /* reset lại trang */
 
   /* bắt đầu header */
 
+=======
+
+  /* --- HEADER STYLES (GIỮ NGUYÊN) --- */
+>>>>>>> b6918fce905ab431c18bceae8ba437083234cda4
   header {
-    width: 100%;           /* Trải dài hết chiều ngang */
+    width: 100%;           
     height: 88px;
     display: flex;
-    position: fixed;       /* Cố định ở trên cùng */
-    top: 0;                /* Sát mép trên */
-    left: 0;               /* Sát mép trái */
-    padding: 20px;         /* Tạo khoảng cách cho icon đỡ sát lề */
-    background-color: #B8FFC3;/* Thêm màu nền để dễ phân biệt (tùy chọn) */
-    z-index: 1000;         /* Đảm bảo luôn nằm trên các thành phần khác */
+    position: fixed;       
+    top: 0;                
+    left: 0;               
+    padding: 20px;         
+    background-color: #B8FFC3;
+    z-index: 1000;         
+    align-items: center; /* Căn giữa dọc cho đẹp */
   }
 
   header i{
@@ -291,10 +309,9 @@ const activeContent = ref('nguoitieudung')
 
   header img {
     height: 164px;
-    margin-top: -60px;
+  
     margin-left: 20px;
   }
-  /* phần icons */
 
   header .Support p{
     color: #000000;
@@ -311,17 +328,16 @@ const activeContent = ref('nguoitieudung')
 
   .header-right {
   margin-left: auto; 
-  display: flex;     /* Để các thành phần bên trong nó nằm hàng ngang */
+  display: flex;    
   align-items: center;
 }
 
-/* Xóa gạch chân cho các thẻ a */
 header a {
   text-decoration: none;
 }
 
 header .Support p {
-  color: #000000; /* Dùng 6 chữ F */
+  color: #000000; 
   margin: 0;
   padding-right: 20px;
   font-weight: bold;
@@ -332,25 +348,23 @@ header .header-right a i:hover {
   transition: 0.4s;
 }
 
-/* phần menu */
-
+/* --- MENU STYLES (GIỮ NGUYÊN) --- */
 .mega-menu-container {
   position: fixed;
-  top: 88px; /* Xuất hiện ngay dưới header */
+  top: 88px; 
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 999; /* Giảm z-index xuống 1 chút để chắc chắn nằm dưới header nếu cần */
 }
 
 .mega-menu-content {
-  display: flex; /* Chia menu làm 2 cột: dọc và ngang */
+  display: flex; 
   background: white;
   width: 100%;
   min-height: 300px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-/* Cột dọc bên trái */
 .menu-sidebar {
   width: 250px;
   border-right: 1px solid #eee;
@@ -369,12 +383,11 @@ header .header-right a i:hover {
   color: #00ff28;
 }
 
-/* VÙNG QUAN TRỌNG: Dàn hàng ngang các menu con */
 .menu-horizontal-content {
-  display: flex;    /* Kích hoạt dàn hàng ngang */
-  flex: 1;          /* Chiếm hết phần còn lại bên phải */
+  display: flex;    
+  flex: 1;          
   padding: 30px;
-  gap: 40px;        /* Khoảng cách giữa các cột con */
+  gap: 40px;        
 }
 
 .menu-column h3 {
@@ -400,7 +413,6 @@ header .header-right a i:hover {
   color: #00ff28;
 }
 
-/* Lớp nền mờ */
 .overlay {
   position: fixed;
   top: 88px;
@@ -411,12 +423,11 @@ header .header-right a i:hover {
   z-index: -1;
 }
 
-/* kết thúc header */
-
-/* bắt đầu background-img */
-.background-img img {
-  width: 100%;
-  margin-top: 88px;
+/* --- PHẦN QUAN TRỌNG MỚI THÊM --- */
+/* Đẩy nội dung xuống 88px để không bị Header che mất */
+.main-content {
+  padding-top: 88px;
+  min-height: 100vh; /* Đảm bảo trang web luôn cao ít nhất bằng màn hình */
 }
 
 /* Phá bỏ giới hạn của thẻ cha #app và body */
@@ -431,6 +442,7 @@ header .header-right a i:hover {
   padding: 0;
   overflow-x: hidden;
 }
+<<<<<<< HEAD
 
 /* Chỉnh lại phần chứa ảnh */
 .background-img {
@@ -730,3 +742,6 @@ header .header-right a i:hover {
   font-weight: bold;
 }
 </style>
+=======
+</style>
+>>>>>>> b6918fce905ab431c18bceae8ba437083234cda4
