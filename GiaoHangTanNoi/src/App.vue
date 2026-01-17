@@ -1,9 +1,9 @@
 <script setup>
 import { ref } from 'vue'
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView } from 'vue-router' // Đảm bảo import đủ
 import './assets/base.css'
 import './assets/icon/icon/themify-icons-font/themify-icons-font/themify-icons/themify-icons.css'
-// Đã xóa dòng import router vì chưa dùng đến để tránh cảnh báo vàng
+import router from './router'
 
 const isMenuOpen = ref(false)
 const activeTab = ref('nguoidung') // Tab mặc định đang chọn
@@ -696,7 +696,7 @@ const activeContent = ref('nguoitieudung')
   }
 
   .footer-logo{
-    width: 150px;
+    width: 100px;
   }
   .address-box h4{
     margin-top: 10px;
