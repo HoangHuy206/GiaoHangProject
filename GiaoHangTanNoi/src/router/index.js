@@ -16,6 +16,12 @@ const router = createRouter({
       name: 'login',
       component: Login
     },
+
+    {
+      path: '/mainsp',
+      name: 'mainsp',
+      component: Login
+    },
     
 
     
