@@ -3,6 +3,8 @@ import HomeView from '../views/HomeView.vue'
 import Login from '../views/Login.vue'
 import DangKy from '../views/dangkynguoidung.vue' 
 import mainSp from '../views/SanPham/main-SP.vue' // Biến nhập vào là "mainSp"
+import phanhoidangky from '@/views/phanhoidangky.vue'
+import dangkynguoidung from '../views/dangkynguoidung.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,6 +35,20 @@ const router = createRouter({
       name: 'dang-ky',
       component: DangKy,      
       meta: { title: 'Đăng ký thành viên' }
+    },
+
+    {
+      path: '/phanhoidangky',      
+      name: 'phanhoidangky',
+      component: phanhoidangky,      
+      meta: { title: 'Đăng ký thành viên ?' }
+    },
+
+    {
+      path: '/dangkynguoidung',      
+      name: 'dangkynguoidung',
+      component: dangkynguoidung,      
+      meta: { title: 'Đăng ký dành cho người dùng' }
     }
   ]
 })

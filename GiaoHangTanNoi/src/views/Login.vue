@@ -22,50 +22,46 @@ const handleRegister = () => {
       <input type="text" placeholder="Tên đăng nhập..." class="input-demo">
       <input type="password" placeholder="Mật khẩu..." class="input-demo" required="">
       <button type="submit" class="btn-demo">Đăng Nhập</button>
-      <p style="color: black; font-size: 20px; "> Hoặc </p>
+      <p style="color: black; font-size: 15px; margin: -15px 0;">Hoặc</p>
       
-     <button> <router-link to="/dang-ky" class="btndemo">
-  Đăng ký
-</router-link></button>
+     <router-link to="/phanhoidangky" class="btndemo1"><button> Đăng ký </button></router-link>
       </div>
-    </div>
-
-
-    
+    </div>    
 </template>
 
 <style scoped>
     .home {
-      background-color: #fdf2e4;
-      height: 100vh; 
-      width:  100%;
-      justify-content: center;  
-      align-items: center;
-      display: flex;
-      position: fixed;
-      top: 0;
-      left: 0;
-      }
+    background-color: #fdf2e4;
+    position: fixed;
+    top: 80px; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+  }
 
-      .anh {
+    .anh {
         height: auto;
         width: 1200px;
-      }
+    }
 
-      
-      .login-box {
+    .login-box {
       background-color: #ffffff;
       width: 800px;              
-      height: 600px;             
+      height: 550px;             
       border-radius: 20px;
-      padding: 40px;            
+      padding: 60px;            
       margin-right: 200px;
       display: flex;            
       flex-direction: column;    
       justify-content: center;   
       align-items: center;       
       gap: 25px;  
-                   
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);             
     }
 
     h2 {
@@ -92,8 +88,8 @@ const handleRegister = () => {
     }
 
     button {
-      width: 50%;
-      padding: 18px;             
+      width: 100%;
+      padding: 15px;             
       font-size: 20px;           
       font-weight: bold;
       background-color: #ff9900;
@@ -101,7 +97,6 @@ const handleRegister = () => {
       border: none;
       border-radius: 10px;
       cursor: pointer;
-      margin-top: 10px;
     }
 
     button:hover {
@@ -112,4 +107,18 @@ const handleRegister = () => {
       color:#ffffff ;
       font-weight: bold;
     }
+
+    .btndemo1{
+      width: 100%;
+    }
+</style>
+
+<style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden !important; 
+  }
 </style>

@@ -4,88 +4,107 @@
 
 <template>
   <div class="register-wrapper">
+    <div class="image-container">
+      <img src="../assets/anh.logo/anhdangkynguoidung.jpg" alt="Background" class="bg-img">
 
-    <div class="logo" >
-      <img src="../assets/anh.logo/anhbiadangnhap1.png" alt=""style="margin-right: 100px;">
-    </div>
-    <div class="register-box" style="margin-right: 20%;">
-      <h2 class="form-title" style="font-size: 20px;">ĐĂNG KÝ TÀI KHOẢN NGƯỜI DÙNG</h2>
-      
-      <form>
-        <div class="form-group">
-          <label>Tên đăng nhập:</label>
-          <input type="text" placeholder="Nhập tên của bạn..." />
-        </div>
+      <div class="register-box">
+        <h2 class="form-title">ĐĂNG KÝ DÀNH CHO NGƯỜI DÙNG</h2>
         
-        <div class="form-group">
-          <label>Mật khẩu:</label>
-          <input type="password" placeholder="Nhập mật khẩu..." />
-        </div>
+        <form>
+          <div class="form-group">
+            <label>Tên đăng nhập:</label>
+            <input type="text" placeholder="Nhập tên..." />
+          </div>
+          
+          <div class="form-group">
+            <label>Mật khẩu:</label>
+            <input type="password" placeholder="Nhập mật khẩu..." />
+          </div>
 
-        <div class="form-group">
-          <label>Nhập lại mật khẩu:</label>
-          <input type="password" placeholder="Xác nhận mật khẩu..." />
-        </div>
+          <div class="form-group">
+            <label>Nhập lại MK:</label>
+            <input type="password" placeholder="Xác nhận..." />
+          </div>
 
-        <button type="button" class="btn-submit">Đăng Ký Ngay</button>
-      </form>
-      
-      <div class="login-link" style="margin-right: 115px;">
-        Đã có tài khoản? 
-        <router-link to="/login">Đăng nhập tại đây</router-link>
+          <button type="button" class="btn-submit">Đăng Ký</button>
+        </form>
+        
+        <div class="login-link">
+          Đã có tài khoản? <br>
+          <router-link to="/login">Đăng nhập ngay</router-link>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-/* --- PHẦN SỬA QUAN TRỌNG NHẤT --- */
+
 .register-wrapper {
-  position: fixed;         /* Cưỡng chế khung này nằm cố định */
-  top: 88px;               /* Bắt đầu ngay bên dưới Header (Header cao 88px) */
+  position: fixed;
+  top: 88px; 
   left: 0;
-  width: 100%;             /* Trải rộng hết chiều ngang */
-  height: calc(100vh - 88px); /* Chiều cao = Toàn màn hình trừ đi Header */
-  background-color: #f4f6f8;  /* Màu nền xám sáng (che nền đen) */
-  display: flex;           /* Dùng flexbox để căn giữa */
-  justify-content: center; /* Căn giữa ngang */
-  align-items: center;     /* Căn giữa dọc */
-  z-index: 10;             /* Đảm bảo nó nổi lên trên các lớp nền cũ */
+  width: 100vw; 
+  height: calc(100vh - 88px);
+  overflow: hidden; 
+  background-color: #e8dcb9; 
+  z-index: 10;
 }
-/* -------------------------------- */
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   
+  object-position: 80% center; 
+}
 
 .register-box {
-  background-color: white;
-  width: 450px;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  position: absolute;
+  top: 50%;         
+  right: 463px;        
+  transform: translateY(-50%); 
+  width: 250px;      
+  height: 480px;     
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: none; 
 }
 
 .form-title {
   text-align: center;
   color: #00b14f;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   font-weight: bold;
+  font-size: 18px;
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   font-weight: bold;
   color: #333;
+  font-size: 13px;
 }
 
 input {
   width: 100%;
-  padding: 10px;
+  padding: 8px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 4px;
   outline: none;
+  font-size: 13px;
 }
 
 input:focus {
@@ -94,29 +113,50 @@ input:focus {
 
 .btn-submit {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
   background-color: #00b14f;
   color: white;
   border: none;
-  border-radius: 5px;
-  font-size: 16px;
+  border-radius: 4px;
+  font-size: 14px;
   font-weight: bold;
   cursor: pointer;
   margin-top: 10px;
+  background-color: #00b14f; 
+  transition: background-color 0.3s ease;
 }
 
 .btn-submit:hover {
-  background-color: #009643;
+  background-color: #018c3b; 
 }
 
 .login-link {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 15px;
+  font-size: 12px;
+  color: #333;
 }
 
 .login-link a {
-  color: #00b14f;
-  text-decoration: none;
+  color: #00b14f;          
+  text-decoration: none;   
   font-weight: bold;
+  background-color: transparent !important;
+  outline: none !important;                 
+  box-shadow: none !important;              
+  border: none !important;                  
+  transition: color 0.2s ease;
+}
+
+.login-link a:hover {
+  color: #007a33 !important; 
+  background-color: transparent !important; 
+}
+
+.login-link a:active, 
+.login-link a:focus {
+  color: #007a33 !important; 
+  background-color: transparent !important; 
+  box-shadow: none !important;
 }
 </style>
