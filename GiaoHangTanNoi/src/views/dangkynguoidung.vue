@@ -6,7 +6,7 @@
   <div class="register-wrapper">
 
     <div class="logo" >
-      <img src="E:\GiaoHangProject\GiaoHangTanNoi\src\assets\anh.logo\anhbiadangnhap1.png" alt=""style="margin-right: 100px;">
+      <img src="../assets/anh.logo/anhbiadangnhap1.png" alt=""style="margin-right: 100px;">
     </div>
     <div class="register-box" style="margin-right: 20%;">
       <h2 class="form-title" style="font-size: 20px;">ĐĂNG KÝ TÀI KHOẢN NGƯỜI DÙNG</h2>

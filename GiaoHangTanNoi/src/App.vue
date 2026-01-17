@@ -1,9 +1,9 @@
 <script setup>
 import { ref } from 'vue'
-import { RouterLink, RouterView } from 'vue-router' // Đảm bảo import đủ
+import { RouterLink, RouterView } from 'vue-router'
 import './assets/base.css'
 import './assets/icon/icon/themify-icons-font/themify-icons-font/themify-icons/themify-icons.css'
-import router from './router'
+// Đã xóa dòng import router vì chưa dùng đến để tránh cảnh báo vàng
 
 const isMenuOpen = ref(false)
 const activeTab = ref('nguoidung') // Tab mặc định đang chọn
@@ -15,7 +15,7 @@ const activeContent = ref('nguoitieudung')
 <template>
   <div id="main">
     <header>
-      <a href="#" @click.prevent="isMenuOpen = !isMenuOpen"><i>&#9776;</i></a>
+      <a href="#" @click.prevent="isMenuOpen = !isMenuOpen"><i>☰</i></a>
       <img src="./assets/anh.logo/anhnen.png" alt="Logo">
 
       <div class="header-right">
@@ -101,9 +101,11 @@ const activeContent = ref('nguoitieudung')
     <div class="background-img">
       <img src="./assets/anh.logo/z7435869738899_000_e53e72bd89e38a070e1aa4f3a917f074.jpg" alt="">
     </div>
+    
     <div class="content">
-      <h2>Từ những dịch vụ thiết yếu đến cơ hội gia tăng thu nhập tất cả đều có trên 1 nền tảng</h2>
+      <h2 style="color: black;">Từ những dịch vụ thiết yếu đến cơ hội gia tăng thu nhập tất cả đều có trên 1 nền tảng</h2>
     </div>
+
     <div class="Display">
       <div class="tab-navigation">
         <button 
@@ -132,10 +134,10 @@ const activeContent = ref('nguoitieudung')
                 <img src="./assets/anh.logo/icondoan.png" alt="Food">
               </div>
               <div class="text-box">
-                <router-link to="/mainSP">
-                <h3>Đồ ăn</h3>
-                <p>Giao món ngon tận tay.</p>
-              </router-link>
+                <router-link to="/mainsp">
+                  <h3>Đồ ăn</h3>
+                  <p>Giao món ngon tận tay.</p>
+                </router-link>
               </div>
             </div>
 
@@ -207,7 +209,9 @@ const activeContent = ref('nguoitieudung')
           <img src="./assets/anh.logo/anhnen.png" alt="" class="footer-logo">
           <div class="address-box">
             <h4>ĐỊA CHỈ </h4>
-            <P>123 xuân phương nam <samp><br></samp> từ  liêm hà nội </P>
+              <div class="map-container">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.296073307168!2d105.7475674103227!3d21.020836187970833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3134549c574476c3%3A0xd3c6af79105ea6da!2zVHLGsOG7nW5nIENhbyDEkeG6s25nIEPDtG5nIG5naOG7hyBDYW8gSMOgIE7hu5lp!5e0!3m2!1svi!2s!4v1768646189995!5m2!1svi!2s" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
           </div>
         </div>
 
@@ -262,7 +266,6 @@ const activeContent = ref('nguoitieudung')
   body, html {
     width: 100%;
     overflow-x: hidden; 
-    
   }
 
   /* --- HEADER STYLES --- */
@@ -647,6 +650,18 @@ const activeContent = ref('nguoitieudung')
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
+  }
+
+  .footer-colum.branding {
+    flex: 1.5; 
+    margin-left: 0;
+  }
+
+  .map-container {
+    margin-top: 15px;
+    border-radius: 8px;
+    overflow: hidden; /* Bo góc cho bản đồ */
+    border: 1px solid rgba(0,0,0,0.1);
   }
 
   .footer-colum {
