@@ -64,7 +64,8 @@ const handleRegister = () => {
       flex-direction: column;    
       justify-content: center;   
       align-items: center;       
-      gap: 25px;                 
+      gap: 25px;  
+                   
     }
 
     h2 {

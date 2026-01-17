@@ -1,9 +1,9 @@
 <script setup>
 import { ref } from 'vue'
-import { RouterLink, RouterView } from 'vue-router' // Đảm bảo import đủ
+import { RouterLink, RouterView } from 'vue-router'
 import './assets/base.css'
 import './assets/icon/icon/themify-icons-font/themify-icons-font/themify-icons/themify-icons.css'
-import router from './router'
+// Đã xóa dòng import router vì chưa dùng đến để tránh cảnh báo vàng
 
 const isMenuOpen = ref(false)
 const activeTab = ref('nguoidung') // Tab mặc định đang chọn
@@ -15,7 +15,7 @@ const activeContent = ref('nguoitieudung')
 <template>
   <div id="main">
     <header>
-      <a href="#" @click.prevent="isMenuOpen = !isMenuOpen"><i>&#9776;</i></a>
+      <a href="#" @click.prevent="isMenuOpen = !isMenuOpen"><i>☰</i></a>
       <img src="./assets/anh.logo/anhnen.png" alt="Logo">
 
       <div class="header-right">
@@ -101,9 +101,11 @@ const activeContent = ref('nguoitieudung')
     <div class="background-img">
       <img src="./assets/anh.logo/z7435869738899_000_e53e72bd89e38a070e1aa4f3a917f074.jpg" alt="">
     </div>
+    
     <div class="content">
       <h2 style="color: black;">Từ những dịch vụ thiết yếu đến cơ hội gia tăng thu nhập tất cả đều có trên 1 nền tảng</h2>
     </div>
+
     <div class="Display">
       <div class="tab-navigation">
         <button 
